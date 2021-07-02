@@ -102,7 +102,7 @@ Network packets are made up of three different parts,
 Network packets can be thought of conceptually to postal packages. The header is the box/envelope, the payload is the box/envelope's content, and the trailer is the signature.
 
 
-`docker ps`
+`docker ps<br/>`
 `docker ps --all` 
 
 `docker create hello-world`
