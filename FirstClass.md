@@ -9,13 +9,13 @@
 
 A network interface is the point of interconnection between a computer and a private or public network. It doesn't have a physical form.
 
-Network Interface Card(NIC):
+Network Interface Card(NIC): <br/>
 https://www.youtube.com/watch?v=778rS_FMb10&ab_channel=thenewboston
 https://www.youtube.com/watch?v=FwNRb6MwXTI&ab_channel=freeCodeCamp.org
 
 NIC is communication medium where ethernet one that connects to my computer and another one that connects to a communication media which is ethernet plug. 
 
-**How do computer talk another computer: NIC**
+**How do computer talk another computer: NIC** <br/>
 
 without NIC a computer can't connect with internet. It is a circuit board installed in a computer that provides a dedicated network connection to the computer.
 
@@ -36,11 +36,11 @@ Then packet goes to User space
 
 https://unix.stackexchange.com/questions/87625/what-is-difference-between-user-space-and-kernel-space
 
-**Kernel space**: Kernel space is where the kernel (i.e., the core of the operating system) executes (i.e., runs) and provides its services.
+**Kernel space**: Kernel space is where the kernel (i.e., the core of the operating system) executes (i.e., runs) and provides its services.<br/>
 
 
 Kernel work: resource manage 
-### What is Kernel?
+### What is Kernel?<br/>
 Just a computer program.basically manages operations of memory and CPU time.
 
 - It acts as a bridge between applications and data processing done at the hardware level. It is the central component of an OS.
@@ -103,36 +103,37 @@ Network packets can be thought of conceptually to postal packages. The header is
 
 
 `docker ps`
+<br/>
 `docker ps --all` 
-
-`docker create hello-world`
+<br/>
+`docker create hello-world`<br/>
 `dockert start -a hello-world id`
-`docker system prune `
+`docker system prune `<br/>
 `docker logs container id` 
-`Stopping containers - docker stop container id (only process stop )`
+`Stopping containers - docker stop container id (only process stop )`<br/>
 `kill container - docker kill container id(full container all process shutdown)`
 
 execute an additional command in a container 
 
-`docker exec -it container id command `
+`docker exec -it container id command `<br/>
 
-- it = allow us to provide input to the container
+- it = allow us to provide input to the container <br/>
 
 without -it flag nothing is happened.
-1. -i = standard in 
-2. -t = nicely formatted text 
+1. -i = standard in <br/>
+2. -t = nicely formatted text <br/>
 docker exec -i id command 
 
-Getting a command prompt in a container - 
+Getting a command prompt in a container - <br/>
 
-`docker exec -it container id sh`
+`docker exec -it container id sh` <br/>
 
 it will give a linux command line/terminal environment
 - control-D to exit
 
 - **sh - a program which is executed inside that computer**
 
-`docker run -it busybox sh`
+`docker run -it busybox sh` <br/>
 
 - container isolation -
 - suppose you open and run two containers
@@ -148,22 +149,23 @@ Every container have seperate from each other.
 # Building custom images through Docker server
 ================================================
 ### CREATING DOCKER IMAGES 
-<code>
-FROM alpine - Download alpine image
-RUN apk add --update redis
-RUN apk add --update gcc
-CMD ["redis-server"]
+<br/>
+<code> <br/>
+FROM alpine - Download alpine image<br/>
+RUN apk add --update redis<br/>
+RUN apk add --update gcc<br/>
+CMD ["redis-server"]<br/>
 </code>
 
 **writing a dockerfile == told computer without os install google chrome**
 
 **Dockerfile is a configuration file how our Docker should behave.**
 
-`docker build .`
+`docker build .` <br/>
 
 
-create a django web app
+create a django web app<br/>
 create a dockerfile
-building image from Dockerfile
+building image from Dockerfile<br/>
 run image as container 
-connect to web app from a browser
+connect to web app from a browser<br/>
