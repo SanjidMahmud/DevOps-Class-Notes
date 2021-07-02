@@ -101,41 +101,45 @@ Network packets are made up of three different parts,
 3. the trailer. 
 Network packets can be thought of conceptually to postal packages. The header is the box/envelope, the payload is the box/envelope's content, and the trailer is the signature.
 
-`code`
-docker ps
-docker ps --all 
-docker create hello-world
-dockert start -a hello-world id
-docker system prune 
-docker logs container id 
-Stopping containers - docker stop container id (only process stop )
-kill container - docker kill container id(full container all process shutdown)
-`code`
+
+`docker ps`
+`docker ps --all` 
+
+`docker create hello-world`
+`dockert start -a hello-world id`
+`docker system prune `
+`docker logs container id` 
+`Stopping containers - docker stop container id (only process stop )`
+`kill container - docker kill container id(full container all process shutdown)`
+
 execute an additional command in a container 
 
-docker exec -it container id command 
+`docker exec -it container id command `
 
-it = allow us to provide input to the container
+- it = allow us to provide input to the container
 
 without -it flag nothing is happened.
--i = standard in 
--t = nicely formatted text 
+1. -i = standard in 
+2. -t = nicely formatted text 
 docker exec -i id command 
 
 Getting a command prompt in a container - 
-docker exec -it container id sh
+
+`docker exec -it container id sh`
+
 it will give a linux command line/terminal environment
-control-D to exit
+- control-D to exit
 
-sh - a program which is executed inside that computer
+- **sh - a program which is executed inside that computer**
 
-docker run -it busybox sh
-container isolation -
-suppose you open and run two containers
-docker run -it busybox sh (2 times)
+`docker run -it busybox sh`
+
+- container isolation -
+- suppose you open and run two containers
+- docker run -it busybox sh (2 times)
 now first terminal create a file 
-touch hi
-ls - you will see the file hi
+`touch hi`
+- ls - you will see the file hi
 go to second terminal and check the second container and 
 there is no hi file.
 
@@ -144,16 +148,18 @@ Every container have seperate from each other.
 # Building custom images through Docker server
 ================================================
 ### CREATING DOCKER IMAGES 
-
+<code>
 FROM alpine - Download alpine image
 RUN apk add --update redis
 RUN apk add --update gcc
 CMD ["redis-server"]
+</code>
 
-writing a dockerfile == told computer without os install google chrome
-Dockerfile is a configuration file how our Docker should behave.
+**writing a dockerfile == told computer without os install google chrome**
 
-docker build .
+**Dockerfile is a configuration file how our Docker should behave.**
+
+`docker build .`
 
 
 create a django web app
