@@ -101,6 +101,7 @@ Network packets are made up of three different parts,
 3. the trailer. 
 Network packets can be thought of conceptually to postal packages. The header is the box/envelope, the payload is the box/envelope's content, and the trailer is the signature.
 
+`code`
 docker ps
 docker ps --all 
 docker create hello-world
@@ -109,7 +110,7 @@ docker system prune
 docker logs container id 
 Stopping containers - docker stop container id (only process stop )
 kill container - docker kill container id(full container all process shutdown)
-
+`code`
 execute an additional command in a container 
 
 docker exec -it container id command 
